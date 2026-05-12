@@ -1,5 +1,5 @@
 ````markdown
-# DevSecOps IAM & Kubernetes Security Lab
+# DevSecOps IAM & Kubernetes Security 
 
 ## 📌 Overview
 This project demonstrates advanced Identity and Access Management (IAM) concepts in a DevSecOps environment using AWS and Kubernetes. The lab focuses on identifying IAM privilege escalation risks, securing cloud access policies, and enforcing Kubernetes security standards through Policy-as-Code using Open Policy Agent (OPA) Gatekeeper.
