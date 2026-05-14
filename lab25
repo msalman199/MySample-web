@@ -1,0 +1,111 @@
+Task 1: Write a Simple Shell Script
+Subtask 1.1: Create and Execute a Basic Script
+Open a terminal and create a directory for your scripts:
+
+mkdir ~/shell_scripts
+cd ~/shell_scripts
+Create a new file named hello_world.sh using a text editor:
+
+nano hello_world.sh
+Add the following script (shebang #!/bin/bash ensures the script runs in bash):
+
+#!/bin/bash
+echo "Hello, World!"
+Save the file and exit the editor (Ctrl+O, Enter, Ctrl+X in nano).
+
+Make the script executable:
+
+chmod +x hello_world.sh
+Run the script:
+
+./hello_world.sh
+Expected Output:
+
+Hello, World!
+Troubleshooting:
+
+If you get a "Permission denied" error, ensure you ran chmod +x.
+If the script doesn’t run, verify the shebang (#!/bin/bash) is on the first line.
+Subtask 1.2: Execute Commands in a Script
+Create a new script system_info.sh:
+
+nano system_info.sh
+Add the following to display system information:
+
+#!/bin/bash
+echo "Current date: $(date)"
+echo "User: $USER"
+echo "Current directory: $(pwd)"
+Save, make executable, and run:
+
+chmod +x system_info.sh
+./system_info.sh
+Expected Output:
+
+Current date: [current date/time]
+User: [your username]
+Current directory: [your working directory]
+Task 2: Variables and Control Flow
+Subtask 2.1: Assign and Use Variables
+Create a script variables.sh:
+
+nano variables.sh
+Add the following script with variables:
+
+#!/bin/bash
+name="OpenShift Learner"
+age=25
+echo "Name: $name, Age: $age"
+Run the script after making it executable.
+
+Expected Output:
+
+Name: OpenShift Learner, Age: 25
+Subtask 2.2: Use an if Statement
+Create a script check_user.sh:
+
+nano check_user.sh
+Add a script to check the current user:
+
+#!/bin/bash
+if [ "$USER" == "root" ]; then
+  echo "Running as root. Be cautious!"
+else
+  echo "Running as $USER."
+fi
+Run the script.
+
+Expected Output (if not root):
+
+Running as [your username].
+Subtask 2.3: Use a for Loop
+Create a script loop.sh:
+
+nano loop.sh
+Add a loop to print numbers 1 to 5:
+
+#!/bin/bash
+for i in {1..5}; do
+  echo "Number: $i"
+done
+Run the script.
+
+Expected Output:
+
+Number: 1
+Number: 2
+...
+Number: 5
+Task 3: Debugging Shell Scripts
+Subtask 3.1: Debug with -x
+Run any script with debug mode:
+bash -x hello_world.sh
+Expected Output:
+
++ echo 'Hello, World!'
+Hello, World!
+Subtask 3.2: Handle Errors
+Intentionally break hello_world.sh by removing the shebang (#!/bin/bash).
+Run it:
+./hello_world.sh
+If it fails, add the shebang back and retry.
